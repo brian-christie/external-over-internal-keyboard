@@ -14,6 +14,7 @@ To re-enable the laptop keyboard, either:
 
 Depends on python and python-evdev package ([docs](https://python-evdev.readthedocs.io/en/latest/tutorial.html)) in Arch Linux.
 
+In Ubuntu, the dependencies are python3 and python3-evdev.
 
 ## Usage
 The command: `python external-over-internal-keyboard.py`

@@ -63,13 +63,13 @@ if __name__ == "__main__":
     # Print info on all devices (need to run as root):
     for device in devices:
         print(f"{device.path}\t{device.name}\t{device.phys}")
-    internal_path = find_internal(devices, laptop_keyboard_name)
+    internal_path = find_internal(devices, internal_keyboard_name)
     if (internal_path == ""):
-        print("Interal keyboard not found. Please adjust the laptop_keyboard_name variable in the script file.")
+        print("Interal keyboard not found. Please adjust the internal_keyboard_name variable in the script file.")
         exit(0)
 
     while 1:
-        devices = [evdev.IsnputDevice(path) for path in evdev.list_devices()]
+        devices = [evdev.InputDevice(path) for path in evdev.list_devices()]
         external_path = find_external(devices, external_keyboard_names)
         print(external_path)
         if (external_path == ""):
